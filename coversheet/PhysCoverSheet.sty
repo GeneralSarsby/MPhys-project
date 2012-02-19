@@ -1,0 +1,110 @@
+\ProvidesPackage{PhysCoverSheet}
+\usepackage[pdftex]{graphicx}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{amsmath,amsfonts}
+\usepackage{multirow}
+\usepackage{keycommand}
+\usepackage{fancyhdr}
+\usepackage{url}% e.g. \url{http://www.math.drofnats.edu/~gauss}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.mps}
+\usepackage{hyperref}
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={Coversheet},    % title
+    pdfauthor={Lancaster University},     % author
+    pdfsubject={Physics},   % subject of the document
+    pdfcreator={},   % creator of the document
+    pdfproducer={}, % producer of the document
+    pdfkeywords={keywords}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=black,          % color of internal links red
+    citecolor=black,        % color of links to bibliography green
+    filecolor=black,      % color of file links magenta
+    urlcolor=black           % color of external links cyan
+}
+\lstset{ %
+    language=Java,                % choose the language of the code
+    basicstyle=\footnotesize\ttfamily,       % the size of the fonts that are used for the code
+    numbers=none,                   % where to put the line-numbers left
+    numberstyle=\footnotesize,      % the size of the fonts that are used for the line-numbers
+    stepnumber=2,                   % the step between two line-numbers. If it's 1 each line will be numbered
+    numbersep=-10pt,                  % how far the line-numbers are from the code
+    %backgroundcolor=\color{lightgray},  % choose the background color. You must add \usepackage{color}
+    showspaces=false,               % show spaces adding particular underscores
+    showstringspaces=false,         % underline spaces within strings
+    showtabs=false,                 % show tabs within strings adding particular underscores
+    frame=single,	                % adds a frame around the code
+    tabsize=2,	                % sets default tabsize to 2 spaces
+    captionpos=b,                   % sets the caption-position to bottom
+    breaklines=true,                % sets automatic line breaking
+    breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+    escapeinside={\%*}{*)}          % if you want to add a comment within your code
+}
+
+\usepackage[top=1.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+\setlength{\parindent}{0mm}
+%\setlength{\oddsidemargin}{0mm}
+%\setlength{\evensidemargin}{0mm}
+%\setlength{\textwidth}{165mm}
+%\setlength{\textheight}{250mm}
+%\setlength{\topmargin}{-30mm}
+%\setlength{\marginparwidth}{15mm}
+%\setlength{\marginparsep}{7mm}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\makeatletter
+\parindent\z@
+\newkeycommand*\Rule[raise=.4ex,width=1em,thick=.4pt][1]{%
+   \rule[\commandkey{raise}]{\commandkey{width}}{\commandkey{thick}}%
+   #1%
+   \rule[\commandkey{raise}]{\commandkey{width}}{\commandkey{thick}}}
+
+\newkeycommand*\charleads[sep=1][2]{%
+   \ifhmode\else\leavevmode\fi\setbox\@tempboxa\hbox{#2}\@tempdima=1.584\wd\@tempboxa%
+   \cleaders\hb@xt@\commandkey{sep}\@tempdima{\hss\box\@tempboxa\hss}#1%
+   \setbox\@tempboxa\box\voidb@x}
+\newcommand*\charfill[1][]{\charleads[{#1}]{\hfill\kern\z@}}
+\newcommand*\charfil[1][]{\charleads[{#1}]{\hfil\kern\z@}}
+\newkeyenvironment*{dblruled}[first=.4pt,second=.4pt,sep=1pt,left=\z@]{%
+   \def\FrameCommand{%
+      \vrule\@width\commandkey{first}%
+      \hskip\commandkey{sep}
+      \vrule\@width\commandkey{second}%
+      \hspace{\commandkey{left}}}%
+   \parindent\z@
+   \MakeFramed {\advance\hsize-\width \FrameRestore}}
+   {\endMakeFramed}
+\makeatother
+
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+
+
+\linespread{0.9}
+\parskip 0.4cm
+
+
+\pagestyle{fancyplain}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+ 
+%\lhead{}%\fancyplain{}{\thepage}}
+%\chead{}
+%\rhead{}%\fancyplain{}{\textit{\leftmark}}}
+
+\cfoot{}
+%\rfoot{}
+
+%\newcommand{name}[num]{definition}
+%\newcommand{headingbox}[1]{}
+
+

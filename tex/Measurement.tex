@@ -1,0 +1,39 @@
+\subsection{Transmission Velocity Measurement}
+To find the total amount of coaxial cable, basic arithmetic is done and using 
+the linear addition of uncertainties there is a total length $l$ of coaxial cable
+ contained in the two coaxial boxes of:
+$$
+l = (388.56 \pm 0.15) \text{m}
+$$
+Turning the equipment on and observing the image on the oscilloscope
+the amplitude of the generated signal (Baseline $\rightarrow$ Pk) is $(2.00 \pm 0.01)$.
+The period and width were measured at $(23.16\pm 0.01)\mu$s and $(0.73\pm 0.01)\mu$s respectively.
+These values are quite close to the generator settings (fig \ref{tab:pulse}) but
+the discrepancy does not inflect the measurement of $v$.
+
+The view on the oscilloscope is portrayed qualitatively in fig \ref{fig:timediff}. It is clear to see
+that the signal takes time to travel down the length of coaxial, and there is a 
+spread in the pulse to produce a `shark fin' shape. The time difference $t$ is chosen to be the easiest to measure at
+the end of the pulse to the tip of the `fin'.
+$$ t = (1.930\pm0.022)\mu\text{s} $$
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.45\textwidth]{pics/oscilloscopereflection.pdf}
+\caption{The time difference \label{fig:timediff}}
+\end{figure}
+Using equation \ref{transmissionvelocity} the velocity is calculated to be:
+$$
+\boxed{v = (2.0133\pm 0.02296)\times 10^8 \text{ms}^{-1}}
+$$
+This is equivalent to about $67.1\%$ of $C$. 
+
+\subsection{Dielectric Constant Calculation \label{sec:DCC}}
+Using equation (\ref{er}) in section \ref{theory}
+directly, and the result of $v$ previously ($C$ as $3\times 10^8$):  
+$$
+\boxed{\epsilon_r = 2.2204 \pm 0.0506}
+$$
+
+
+ 

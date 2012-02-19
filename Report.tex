@@ -1,0 +1,40 @@
+%written by MJS
+\documentclass[pdftex,11pt,twocolumn,a4paper]{article}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\usepackage{MJSreport}
+%\usepackage{makeidx} %%for using index or not. 
+\makeindex
+
+
+\title{Title}
+\author{M. J. Sarsby}
+\date{\today}
+\numberwithin{equation}{section}
+\begin{document}
+\input{./tex/Titlepage.tex} %%use this page or un-re-comment the \maketitle
+%\maketitle
+\input{./tex/Abstract.tex}
+\tableofcontents
+%%\listoffigures
+%%\listoftables
+ 
+\input{./tex/Intro.tex}
+\section{Section}
+\input{./tex/Theory.tex}
+\input{./tex/Apparatus.tex}
+\input{./tex/Measurement.tex}
+\section{Other Section}
+
+\input{./tex/Conclusion.tex}
+
+\input{./tex/Appendix.tex}
+
+%%\input{./tex/References.tex} %%now using bibtex ftw
+
+\bibliographystyle{ieeetr}
+\addcontentsline{toc}{section}{Bibliography}
+\bibliography{References}
+\addcontentsline{toc}{section}{Index}
+\printindex
+\end{document}
+
