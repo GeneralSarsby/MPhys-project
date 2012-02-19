@@ -4,23 +4,3 @@ This reposatory is for my masters project.
 I'm used to working with LaTeX, but this is
 the first time I've used Git.
 
-
-Features of this template:
-Makefile:
-    make all (everything includeing references from bibtex etc.)
-    make quick (just pdflatex once over report.tex)
-    make clean (cleans all temp files)
-Multi-file setup
-    each section has a file found in ./tex/ and included into the main report.
-    all the better to work with tabs!
-Bibtex intergraion
-    I've got a basics setup in References.bib
-Graphing
-    to create nice latex graphes there is a ./graphs/ python scrips that will do
-    the work
-    
-ToDo
-add git reposatory? DONE
-add /index ? (there is a command for this somewhere) DONE
-get indexhyperlinks to go to the correct page, currentally off by 1 to soon. but
-it does go to the correct page numbered (at the bottom)
